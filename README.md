@@ -78,7 +78,7 @@ HungryHeaven is a comprehensive restaurant management system with integrated onl
 All rights reserved
 
 ## Author
-[Your Name]
+SHRISHAIL MULAGUND
 
 ## Acknowledgments
 - Bootstrap for the responsive UI components
