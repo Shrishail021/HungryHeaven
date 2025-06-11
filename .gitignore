@@ -1,0 +1,68 @@
+# XAMPP specific
+.htaccess
+htdocs
+xampp/
+
+# IDE specific
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Composer
+/vendor/
+composer.lock
+
+# Node modules
+/node_modules/
+npm-debug.log
+yarn-error.log
+
+# Cache and logs
+/storage/*.key
+/storage/framework/cache/
+/storage/framework/sessions/
+/storage/framework/views/
+/storage/logs/
+
+# Debug
+.DS_Store
+Thumbs.db
+
+# Local development
+.env.local
+.env.*.local
+
+# Database
+*.sqlite
+*.sql
+*.sqlite3
+*.db
+
+# Config files with sensitive data
+config/database.php
+config/app.php
+
+# Laravel specific
+bootstrap/cache/
+public/storage
+public/hot
+
+# Testing
+/coverage
+.phpunit.result.cache
+
+# Optional npm or yarn directory
+/node_modules
+
+# Optional REPL
+.phpunit.result.cache
+.php_cs.cache
+
+# Optional npm debug log
+npm-debug.log*

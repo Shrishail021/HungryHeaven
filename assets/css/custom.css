@@ -1,0 +1,246 @@
+/* Custom CSS for Hungry Heaven */
+
+/* General Styles */
+:root {
+    --primary-color: #e74c3c;
+    --secondary-color: #f39c12;
+    --accent-color: #2ecc71;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.img-fluid{
+    height: 60px;
+}
+
+/* Glass Card Effect */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section with Parallax */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.parallax-bg {
+    background-image: url('../images/food/loginback2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.parallax-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Food Cards */
+.food-card {
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.food-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.food-card img {
+    height: 300px;
+    object-fit: cover;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.food-card .card-body {
+    padding: 1.5rem;
+}
+
+.food-card .price {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Category Cards */
+.category-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.category-card img {
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover img {
+    transform: scale(1.1);
+}
+
+.category-card .category-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.category-card:hover .category-name {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Custom Navbar Styles */
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85) !important; /* Brighter link color */
+    font-size: 1.1rem; /* Larger font size */
+    padding: 0.5rem 1rem; /* Add some padding */
+    text-transform: uppercase; /* Uppercase text for more impact */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: #ffffff !important; /* White color on hover/focus */
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    font-weight: bold; /* Make the active link bold */
+    color: #ffffff !important;
+}
+
+/* Testimonial Carousel */
+.testimonial-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+/* Counter Section */
+.counter i {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.counter-number {
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+/* Cart Badge */
+.badge {
+    font-size: 0.6rem;
+}
+
+/* Custom buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #c0392b;
+    border-color: #c0392b;
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+
+
+/* Login and Registration Forms */
+.auth-card {
+    max-width: 450px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.auth-card .card-header {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Order Status Pills */
+.status-pill {
+    display: inline-block;
+    padding: 0.25em 0.6em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 10rem;
+}
+
+/* Food item modal */
+.food-modal .modal-body {
+    padding: 0;
+}
+
+.food-modal .food-image {
+    height: 250px;
+    object-fit: cover;
+}
+
+.food-modal .food-details {
+    padding: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 70vh;
+    }
+    
+    .food-card img {
+        height: 180px;
+    }
+    
+    .counter-number {
+        font-size: 2rem;
+    }
+}
